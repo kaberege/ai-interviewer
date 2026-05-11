@@ -1,73 +1,61 @@
-# React + TypeScript + Vite
+# AI Interview Architect
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, AI-powered interview question generator. This application allows users to instantly generate high-quality interview questions for any job role using generative AI.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Gemini AI Integration**: Uses `@google/genai` to generate context-aware interview questions.
+- **Tailwind CSS 4.0**: Fully styled with the latest Tailwind features for a sleek, modern UI.
+- **Dark Mode**: Smooth transition between light and dark themes.
+- **Vite Powered**: Ultra-fast development and build process.
+- **Fully Responsive**: Optimized for desktop, tablet, and mobile screens.
+- **Type Safe**: Written in TypeScript with strict error handling and interface definitions.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React 19
+- **Styling**: Tailwind CSS 4 & Lucide React (Icons)
+- **AI Engine**: Google Gemini API (gemini-2.5-flash)
+- **Language**: TypeScript
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Node.js
+- A Google AI Studio API Key. Get one [here](https://aistudio.google.com/app/apikey).
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. **Clone the repository:**
+
+   ```bash
+   git clone [https://github.com/kaberege/ai-interviewer.git](https://github.com/kaberege/ai-interviewer.git)
+   cd ai-interviewer
+
+   ```
+
+2. **Install dependencies:**
+
+```bash
+npm install
+
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+````
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+3. **Environment Setup:**
+   Create a `.env` file in the root directory and add your API key:
+   ```env
+   VITE_GEMINI_API_KEY=your_actual_api_key_here
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+````
+
+4. **Run the development server:**
+
+```bash
+npm run dev
+
+
 ```
