@@ -45,11 +45,10 @@ npm install
 3. **Environment Setup:**
    Create a `.env` file in the root directory and add your API key:
 
-   ````env
+   ```env
    VITE_GEMINI_API_KEY=your_actual_api_key_here
-   ```S
 
-   ````
+   ```
 
 4. **Run the development server:**
 
