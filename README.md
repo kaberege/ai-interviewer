@@ -13,8 +13,8 @@ A modern, AI-powered interview question generator. This application allows users
 
 ## Tech Stack
 
-- **Frontend**: React 19
-- **Styling**: Tailwind CSS 4 & Lucide React (Icons)
+- **Frontend**: React
+- **Styling**: Tailwind CSS & Lucide React (Icons)
 - **AI Engine**: Google Gemini API (gemini-2.5-flash)
 - **Language**: TypeScript
 
@@ -30,7 +30,7 @@ A modern, AI-powered interview question generator. This application allows users
 1. **Clone the repository:**
 
    ```bash
-   git clone [https://github.com/kaberege/ai-interviewer.git](https://github.com/kaberege/ai-interviewer.git)
+   git clone https://github.com/kaberege/ai-interviewer.git
    cd ai-interviewer
 
    ```
@@ -40,22 +40,20 @@ A modern, AI-powered interview question generator. This application allows users
 ```bash
 npm install
 
-
 ```
-
-````
 
 3. **Environment Setup:**
    Create a `.env` file in the root directory and add your API key:
-   ```env
-   VITE_GEMINI_API_KEY=your_actual_api_key_here
 
-````
+   ````env
+   VITE_GEMINI_API_KEY=your_actual_api_key_here
+   ```S
+
+   ````
 
 4. **Run the development server:**
 
 ```bash
 npm run dev
-
 
 ```
